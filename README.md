@@ -50,10 +50,10 @@ Foi criado um Environment no Postman para armazenar as variáveis utilizadas nas
 **4.3 Qual a finalidade das variáveis:**
 As variáveis foram configuradas para facilitar a utilização dos dados nas requisições HTTP realizadas pelo Postman. Cada variável possui uma finalidade específica:
 
--base_url: armazena a URL do projeto Supabase.
--api_key: armazena a chave da API utilizada nas requisições.
--email: armazena o e-mail do usuário de teste.
--password: armazena a senha do usuário de teste.
+- base_url: armazena a URL do projeto Supabase.
+- api_key: armazena a chave da API utilizada nas requisições.
+- email: armazena o e-mail do usuário de teste.
+- password: armazena a senha do usuário de teste.
 
 O uso dessas variáveis permite reutilizar os dados nas requisições, facilitando a organização e a execução dos testes de autenticação.
 
@@ -77,9 +77,9 @@ Foi utilizado o método POST para enviar as credenciais do usuário (e-mail e se
 **5.3 Headers utilizados:**
 Foram configurados três headers na requisição HTTP:
 
--apikey: utiliza a variável {{api_key}}, que armazena a chave da API do projeto Supabase.
--Authorization: utiliza o formato Bearer {{api_key}} para enviar a chave no cabeçalho de autorização.
--Content-Type: utiliza o valor application/json, indicando que o corpo da requisição está no formato JSON.
+- apikey: utiliza a variável {{api_key}}, que armazena a chave da API do projeto Supabase.
+- Authorization: utiliza o formato Bearer {{api_key}} para enviar a chave no cabeçalho de autorização.
+- Content-Type: utiliza o valor application/json, indicando que o corpo da requisição está no formato JSON.
 
 **5.4 Body JSON utilizado:**
 O corpo da requisição foi configurado no formato JSON, utilizando as variáveis {{email}} e {{password}}, que correspondem ao e-mail e à senha do usuário de teste armazenados no Environment do Postman.
