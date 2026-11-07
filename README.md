@@ -64,7 +64,7 @@ O Postman será utilizado para enviar requisições HTTP à API de autenticaçã
 As evidências da configuração do Postman estão disponíveis na pasta 'prints/postman' deste repositório. Elas incluem capturas de tela do Workspace criado, do Environment configurado, das variáveis utilizadas (base_url, api_key, email e password) e da organização das requisições no Postman.
 
 ---
-#5. Configuração das Requisições
+# 5. Configuração das Requisições
 
 **5.1 Endpoint utilizado:**
 /auth/v1/token?grant_type=password
@@ -77,19 +77,29 @@ Foi utilizado o método POST para enviar as credenciais do usuário (e-mail e se
 **5.3 Headers utilizados:**
 Foram configurados três headers na requisição HTTP:
 
-- apikey: utiliza a variável {{api_key}}, que armazena a chave da API do projeto Supabase.
-- Authorization: utiliza o formato Bearer {{api_key}} para enviar a chave no cabeçalho de autorização.
-- Content-Type: utiliza o valor application/json, indicando que o corpo da requisição está no formato JSON.
+| Header | Valor |
+|---|---|
+| `apikey` | `{{api_key}}` |
+| `Authorization` | `Bearer {{api_key}}` |
+| `Content-Type` | `application/json` |
+
+A variável `{{api_key}}` armazena a chave da API do projeto Supabase. O header `Authorization` utiliza o formato `Bearer` para enviar a chave, enquanto `Content-Type` indica que o corpo da requisição está no formato JSON.
 
 **5.4 Body JSON utilizado:**
-O corpo da requisição foi configurado no formato JSON, utilizando as variáveis {{email}} e {{password}}, que correspondem ao e-mail e à senha do usuário de teste armazenados no Environment do Postman.
+O corpo da requisição foi configurado no formato JSON, utilizando as variáveis `{{email}}` e `{{password}}`, que correspondem ao e-mail e à senha do usuário de teste armazenados no Environment do Postman.
+
+```json
 {
   "email": "{{email}}",
   "password": "{{password}}"
 }
+```
 
 **5.5 Finalidade da requisição:**
 A requisição tem como finalidade realizar a autenticação de um usuário na API do Supabase por meio do e-mail e da senha. A partir da resposta recebida, é possível verificar se as credenciais são válidas, analisar o código de status HTTP e observar os dados retornados pela API.
+
+**5.6 Evidências:**
+As evidências da configuração das requisições HTTP estão disponíveis na pasta 'prints/postman' deste repositório. Elas incluem capturas de tela do endpoint utilizado, do método HTTP, dos headers configurados, do Body JSON e da requisição criada no Postman.
 
 ---
 #6. Execução dos Testes
