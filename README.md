@@ -19,7 +19,9 @@ O usuário de teste foi criado pelo painel de gerenciamento do Supabase, na seç
 **3.4 Qual o objetivo da configuração realizada:**
 O objetivo da configuração do Supabase foi preparar um ambiente de autenticação para a execução de testes caixa cinza em uma API. A criação do usuário de teste e a configuração da autenticação por e-mail e senha permitiram realizar requisições pelo Postman, verificando o comportamento da API diante de credenciais válidas e inválidas, os códigos de status HTTP, as respostas JSON e as mensagens de erro retornadas.
 
+**3.5 Evidências obrigatórias:**
 
+As evidências da configuração do Supabase estão disponíveis na pasta `prints/` deste repositório. Elas incluem capturas de tela da criação do projeto, do painel da plataforma, da autenticação habilitada, do usuário de teste, das credenciais da API e da identificação do aluno no ambiente.
 ---
 #4. Configuração do Postman
 ---
