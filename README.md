@@ -22,7 +22,7 @@ Esta atividade tem como objetivo fazer com que o aluno compreenda e aplique test
 
 ---
 #3. Configuração do Supabase
-
+---
 **3.1 Como o projeto foi criado:**
 Foi criado um novo projeto na plataforma Supabase para a realização da atividade de testes caixa cinza em uma API de autenticação. O projeto foi utilizado para disponibilizar o ambiente de autenticação, gerenciar o usuário de teste e obter as informações necessárias para realizar as requisições HTTP pelo Postman.
 
