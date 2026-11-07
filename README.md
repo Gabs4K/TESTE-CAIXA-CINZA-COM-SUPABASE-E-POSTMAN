@@ -36,10 +36,33 @@ O usuário de teste foi criado pelo painel de gerenciamento do Supabase, na seç
 O objetivo da configuração do Supabase foi preparar um ambiente de autenticação para a execução de testes caixa cinza em uma API. A criação do usuário de teste e a configuração da autenticação por e-mail e senha permitiram realizar requisições pelo Postman, verificando o comportamento da API diante de credenciais válidas e inválidas, os códigos de status HTTP, as respostas JSON e as mensagens de erro retornadas.
 
 **3.5 Evidências obrigatórias:**
-As evidências da configuração do Supabase estão disponíveis na pasta 'prints/' deste repositório. Elas incluem capturas de tela da criação do projeto, do painel da plataforma, da autenticação habilitada, do usuário de teste, das credenciais da API e da identificação do aluno no ambiente.
+As evidências da configuração do Supabase estão disponíveis na pasta 'prints/supabase' deste repositório. Elas incluem capturas de tela da criação do projeto, do painel da plataforma, da autenticação habilitada, do usuário de teste, das credenciais da API e da identificação do aluno no ambiente.
 
 ---
 #4. Configuração do Postman
+---
+**4.1 Como o Workspace foi criado:**
+Foi criado um Workspace no Postman Desktop para organizar as requisições HTTP utilizadas na atividade. Esse espaço permite reunir e gerenciar as requisições relacionadas aos testes de autenticação da API do Supabase, facilitando a execução e a análise dos resultados.
+
+**4.2 Como o Environment foi configurado:**
+Foi criado um Environment no Postman para armazenar as variáveis utilizadas nas requisições de autenticação. Foram configuradas as variáveis base_url, api_key, email e password, correspondentes à URL do projeto Supabase, à chave da API e às credenciais do usuário de teste. Essa configuração facilita a reutilização dos dados durante a execução dos testes.
+
+**4.3 Qual a finalidade das variáveis:**
+As variáveis foram configuradas para facilitar a utilização dos dados nas requisições HTTP realizadas pelo Postman. Cada variável possui uma finalidade específica:
+
+-base_url: armazena a URL do projeto Supabase.
+-api_key: armazena a chave da API utilizada nas requisições.
+-email: armazena o e-mail do usuário de teste.
+-password: armazena a senha do usuário de teste.
+
+O uso dessas variáveis permite reutilizar os dados nas requisições, facilitando a organização e a execução dos testes de autenticação.
+
+**4.4 Como o Postman será utilizado nos testes:**
+O Postman será utilizado para enviar requisições HTTP à API de autenticação do Supabase e analisar as respostas recebidas. Serão realizados testes com credenciais válidas e inválidas para verificar o comportamento da API em diferentes cenários. Os resultados serão avaliados por meio dos códigos de status HTTP, das respostas em JSON e das mensagens de erro retornadas, permitindo comparar os resultados obtidos com os resultados esperados.
+
+**4.5 Evidências obrigatórias:**
+As evidências da configuração do Postman estão disponíveis na pasta 'prints/postman' deste repositório. Elas incluem capturas de tela do Workspace criado, do Environment configurado, das variáveis utilizadas (base_url, api_key, email e password) e da organização das requisições no Postman.
+
 ---
 #5. Configuração das Requisições
 ---
