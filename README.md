@@ -6,8 +6,10 @@ Testes de caixa cinza em API de autenticação utilizando Supabase e Postman.
 Esta atividade consiste na realização de testes caixa cinza em uma API de autenticação utilizando o Supabase e o Postman. O Supabase foi utilizado para disponibilizar o serviço de autenticação por e-mail e senha, enquanto o Postman foi utilizado para enviar requisições HTTP e analisar as respostas da API.
 
 Durante a atividade, foram realizados testes com diferentes cenários de autenticação, permitindo observar os códigos de status HTTP, as respostas em JSON e as mensagens de erro retornadas pelo sistema.
+
 ---
 #2. Objetivo da Atividade
+---
 
 Esta atividade tem como objetivo fazer com que o aluno compreenda e aplique testes de caixa cinza em APIs de autenticação, utilizando ferramentas modernas de mercado para configuração, execução e validação de testes funcionais. Durante a atividade o aluno deverá:
 
