@@ -6,6 +6,7 @@ Testes de caixa cinza em API de autenticação utilizando Supabase e Postman.
 #2. Objetivo da Atividade
 ---
 #3. Configuração do Supabase
+---
 Como o projeto foi criado:
 Qual tipo de autenticação foi utilizada:
 Como o usuário foi criado:
