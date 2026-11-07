@@ -143,6 +143,7 @@ As evidências dos testes estão disponíveis na pasta 'prints/postman' deste re
 ---
 # 7. Registro dos Testes
 ---
+
 **7.1 Como os testes foram registrados:**
 Os testes foram executados no Postman e seus resultados foram registrados em uma planilha, contendo o ID do teste, cenário, entrada utilizada, resultado esperado, resultado obtido, status e observações.
 
@@ -153,11 +154,12 @@ A documentação dos testes é importante para facilitar a compreensão dos cen�
 As únicas falhas identificadas foram as respostas de erro previstas nos cenários de teste, como senha incorreta, usuário inexistente, credenciais inválidas e campos vazios. A API apresentou o comportamento esperado em todas as situações, sem falhas inesperadas.
 
 **7.4 Evidências obrigatórias:**
-As evidências do registro dos testes estão disponíveis na pasta prints/planilha deste repositório.
+As evidências do registro dos testes estão disponíveis na pasta 'prints/planilha' deste repositório.
 
 ---
 # 8. Resultados Obtidos
 ---
+
 Login válido: a API retornou 200 OK, com os dados da sessão e o access_token, confirmando a autenticação.
 
 Senha incorreta: a API retornou 400 Bad Request, com a mensagem invalid_credentials.
@@ -169,13 +171,14 @@ Campos vazios: a API retornou 400 Bad Request, com a mensagem missing email or p
 Credenciais inválidas: a API retornou 400 Bad Request, com a mensagem invalid_credentials.
 
 Os resultados demonstraram que a API autenticou o usuário com credenciais válidas e rejeitou as tentativas inválidas, retornando mensagens de erro de acordo com os dados enviados em cada requisição.
+
 ---
 # 9. Conclusão
 ---
+
 Os testes caixa cinza foram executados corretamente utilizando o Postman, permitindo verificar o funcionamento da autenticação da API do Supabase em diferentes cenários.
 A autenticação funcionou conforme esperado: as credenciais válidas permitiram o login e o retorno do access_token, enquanto as tentativas com credenciais inválidas foram rejeitadas pela API.
 Durante a atividade, uma das dificuldades foi compreender e utilizar as plataformas Supabase e Postman, especialmente na configuração das requisições HTTP, no preenchimento dos headers e do body JSON e na interpretação das respostas retornadas pela API.
 As falhas identificadas foram as respostas de erro previstas nos cenários de teste, sem erros inesperados.
 Como melhorias, poderiam ser implementadas mensagens de validação mais explicativas e novos cenários de teste com diferentes usuários e combinações de credenciais, ampliando a cobertura dos testes.
 A atividade demonstrou a importância dos testes caixa cinza em APIs, pois permitem analisar o comportamento da aplicação com base em informações internas e externas, identificar possíveis problemas e verificar se os mecanismos de autenticação funcionam corretamente.
----
