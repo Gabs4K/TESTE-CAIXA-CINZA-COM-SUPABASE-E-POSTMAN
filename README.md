@@ -1,21 +1,29 @@
 # TESTE-CAIXA-CINZA-COM-SUPABASE-E-POSTMAN
 Testes de caixa cinza em API de autenticação utilizando Supabase e Postman.
 ---
-# Introdução
+#1. Introdução
 ---
-# Objetivo da Atividade
+#2. Objetivo da Atividade
 ---
-# Configuração do Supabase
+#3. Configuração do Supabase
+Como o projeto foi criado:
+Qual tipo de autenticação foi utilizada:
+Como o usuário foi criado:
+Qual o objetivo da configuração realizada:
+Evidências obrigatórias:
+
+
+qual tipo de autenticação foi utilizada: 
 ---
-# Configuração do Postman
+#4. Configuração do Postman
 ---
-# Configuração das Requisições
+#5. Configuração das Requisições
 ---
-# Execução dos Testes
+#6. Execução dos Testes
 ---
-# Registro dos Testes
+#7. Registro dos Testes
 ---
-# Resultados Obtidos
+#8. Resultados Obtidos
 ---
-# Conclusão
+#9. Conclusão
 ---
