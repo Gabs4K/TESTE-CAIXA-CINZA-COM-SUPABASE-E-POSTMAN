@@ -1,14 +1,14 @@
 # TESTE-CAIXA-CINZA-COM-SUPABASE-E-POSTMAN
 Testes de caixa cinza em API de autenticação utilizando Supabase e Postman.
 ---
-#1. Introdução
+# 1. Introdução
 ---
 Esta atividade consiste na realização de testes caixa cinza em uma API de autenticação utilizando o Supabase e o Postman. O Supabase foi utilizado para disponibilizar o serviço de autenticação por e-mail e senha, enquanto o Postman foi utilizado para enviar requisições HTTP e analisar as respostas da API.
 
 Durante a atividade, foram realizados testes com diferentes cenários de autenticação, permitindo observar os códigos de status HTTP, as respostas em JSON e as mensagens de erro retornadas pelo sistema.
 
 ---
-#2. Objetivo da Atividade
+# 2. Objetivo da Atividade
 ---
 
 Esta atividade tem como objetivo fazer com que o aluno compreenda e aplique testes de caixa cinza em APIs de autenticação, utilizando ferramentas modernas de mercado para configuração, execução e validação de testes funcionais. Durante a atividade o aluno deverá:
@@ -21,7 +21,7 @@ Esta atividade tem como objetivo fazer com que o aluno compreenda e aplique test
 - documentar tecnicamente todo o processo realizado.
 
 ---
-#3. Configuração do Supabase
+# 3. Configuração do Supabase
 ---
 **3.1 Como o projeto foi criado:**
 Foi criado um novo projeto na plataforma Supabase para a realização da atividade de testes caixa cinza em uma API de autenticação. O projeto foi utilizado para disponibilizar o ambiente de autenticação, gerenciar o usuário de teste e obter as informações necessárias para realizar as requisições HTTP pelo Postman.
@@ -36,10 +36,10 @@ O usuário de teste foi criado pelo painel de gerenciamento do Supabase, na seç
 O objetivo da configuração do Supabase foi preparar um ambiente de autenticação para a execução de testes caixa cinza em uma API. A criação do usuário de teste e a configuração da autenticação por e-mail e senha permitiram realizar requisições pelo Postman, verificando o comportamento da API diante de credenciais válidas e inválidas, os códigos de status HTTP, as respostas JSON e as mensagens de erro retornadas.
 
 **3.5 Evidências obrigatórias:**
-As evidências da configuração do Supabase estão disponíveis na pasta 'prints/supabase' deste repositório. Elas incluem capturas de tela da criação do projeto, do painel da plataforma, da autenticação habilitada, do usuário de teste, das credenciais da API e da identificação do aluno no ambiente.
+As evidências da configuração do Supabase estão disponíveis na pasta 'prints/supabase' deste repositório.
 
 ---
-#4. Configuração do Postman
+# 4. Configuração do Postman
 ---
 **4.1 Como o Workspace foi criado:**
 Foi criado um Workspace no Postman Desktop para organizar as requisições HTTP utilizadas na atividade. Esse espaço permite reunir e gerenciar as requisições relacionadas aos testes de autenticação da API do Supabase, facilitando a execução e a análise dos resultados.
@@ -61,10 +61,11 @@ O uso dessas variáveis permite reutilizar os dados nas requisições, facilitan
 O Postman será utilizado para enviar requisições HTTP à API de autenticação do Supabase e analisar as respostas recebidas. Serão realizados testes com credenciais válidas e inválidas para verificar o comportamento da API em diferentes cenários. Os resultados serão avaliados por meio dos códigos de status HTTP, das respostas em JSON e das mensagens de erro retornadas, permitindo comparar os resultados obtidos com os resultados esperados.
 
 **4.5 Evidências obrigatórias:**
-As evidências da configuração do Postman estão disponíveis na pasta 'prints/postman' deste repositório. Elas incluem capturas de tela do Workspace criado, do Environment configurado, das variáveis utilizadas (base_url, api_key, email e password) e da organização das requisições no Postman.
+As evidências da configuração do Postman estão disponíveis na pasta 'prints/postman' deste repositório. 
 
 ---
 # 5. Configuração das Requisições
+---
 
 **5.1 Endpoint utilizado:**
 /auth/v1/token?grant_type=password
@@ -99,14 +100,80 @@ O corpo da requisição foi configurado no formato JSON, utilizando as variávei
 A requisição tem como finalidade realizar a autenticação de um usuário na API do Supabase por meio do e-mail e da senha. A partir da resposta recebida, é possível verificar se as credenciais são válidas, analisar o código de status HTTP e observar os dados retornados pela API.
 
 **5.6 Evidências:**
-As evidências da configuração das requisições HTTP estão disponíveis na pasta 'prints/postman' deste repositório. Elas incluem capturas de tela do endpoint utilizado, do método HTTP, dos headers configurados, do Body JSON e da requisição criada no Postman.
+As evidências da configuração das requisições HTTP estão disponíveis na pasta 'prints/postman' deste repositório.
 
 ---
-#6. Execução dos Testes
+# 6. Execução dos Testes
 ---
-#7. Registro dos Testes
+
+**6.1 Quais cenários foram executados:**
+Foram executados cinco cenários para verificar a autenticação da API do Supabase: login válido, senha incorreta, usuário inexistente, campos vazios e credenciais inválidas.
+
+**6.2 Quais entradas foram utilizadas:**
+Foram utilizadas diferentes combinações de e-mail e senha, incluindo credenciais válidas, senha incorreta, e-mail não cadastrado, campos vazios e credenciais inválidas.
+
+**6.3 Quais resultados foram obtidos:**
+- Login válido: retornou 200 OK, com os dados da sessão e o access_token.
+- Senha incorreta: retornou 400 Bad Request, com a mensagem invalid_credentials.
+- Usuário inexistente: retornou 400 Bad Request, com a mensagem invalid_credentials.
+- Campos vazios: retornou 400 Bad Request, com a mensagem missing email or phone.
+- Credenciais inválidas: retornou 400 Bad Request, com a mensagem invalid_credentials.
+
+**6.4 Quais erros foram encontrados:**
+- Senha incorreta: invalid_credentials.
+- Usuário inexistente: invalid_credentials.
+- Campos vazios: missing email or phone.
+- Credenciais inválidas: invalid_credentials.
+As mensagens retornadas pela API corresponderam às tentativas de autenticação inválidas realizadas durante os testes, sem erros inesperados identificados.
+
+### 6.5 Tabela de Cenários
+
+| Cenário | Entrada Utilizada | Resultado Esperado | Resultado Obtido | Status |
+|---|---|---|---|---|
+| Login válido | E-mail e senha corretos | Status 200 + access token | 200 OK + access token | OK |
+| Senha incorreta | E-mail cadastrado e senha incorreta | Erro de autenticação | 400 Bad Request — `invalid_credentials` | OK |
+| Usuário inexistente | E-mail não cadastrado | Acesso negado | 400 Bad Request — `invalid_credentials` | OK |
+| Campos vazios | E-mail e senha vazios | Erro de validação | 400 Bad Request — `missing email or phone` | OK |
+| Credenciais inválidas | Credenciais incorretas | Mensagem de erro | 400 Bad Request — `invalid_credentials` | OK |
+
+
+**6.6 Evidências obrigatórias:**
+As evidências dos testes estão disponíveis na pasta 'prints/postman' deste repositório.
+
 ---
-#8. Resultados Obtidos
+# 7. Registro dos Testes
 ---
-#9. Conclusão
+**7.1 Como os testes foram registrados:**
+Os testes foram executados no Postman e seus resultados foram registrados em uma planilha, contendo o ID do teste, cenário, entrada utilizada, resultado esperado, resultado obtido, status e observações.
+
+**7.2 Qual a importância da documentação dos testes:**
+A documentação dos testes é importante para facilitar a compreensão dos cenários executados, organizar os resultados, comparar o que era esperado com o que foi obtido e identificar possíveis falhas na API.
+
+**7.3 Quais falhas foram identificadas:**
+As únicas falhas identificadas foram as respostas de erro previstas nos cenários de teste, como senha incorreta, usuário inexistente, credenciais inválidas e campos vazios. A API apresentou o comportamento esperado em todas as situações, sem falhas inesperadas.
+
+**7.4 Evidências obrigatória:**
+---
+# 8. Resultados Obtidos
+---
+Login válido: a API retornou 200 OK, com os dados da sessão e o access_token, confirmando a autenticação.
+
+Senha incorreta: a API retornou 400 Bad Request, com a mensagem invalid_credentials.
+
+Usuário inexistente: a API retornou 400 Bad Request, com a mensagem invalid_credentials.
+
+Campos vazios: a API retornou 400 Bad Request, com a mensagem missing email or phone, indicando que o e-mail ou telefone não foi informado.
+
+Credenciais inválidas: a API retornou 400 Bad Request, com a mensagem invalid_credentials.
+
+Os resultados demonstraram que a API autenticou o usuário com credenciais válidas e rejeitou as tentativas inválidas, retornando mensagens de erro de acordo com os dados enviados em cada requisição.
+---
+# 9. Conclusão
+---
+Os testes caixa cinza foram executados corretamente utilizando o Postman, permitindo verificar o funcionamento da autenticação da API do Supabase em diferentes cenários.
+A autenticação funcionou conforme esperado: as credenciais válidas permitiram o login e o retorno do access_token, enquanto as tentativas com credenciais inválidas foram rejeitadas pela API.
+Durante a atividade, uma das dificuldades foi compreender e utilizar as plataformas Supabase e Postman, especialmente na configuração das requisições HTTP, no preenchimento dos headers e do body JSON e na interpretação das respostas retornadas pela API.
+As falhas identificadas foram as respostas de erro previstas nos cenários de teste, sem erros inesperados.
+Como melhorias, poderiam ser implementadas mensagens de validação mais explicativas e novos cenários de teste com diferentes usuários e combinações de credenciais, ampliando a cobertura dos testes.
+A atividade demonstrou a importância dos testes caixa cinza em APIs, pois permitem analisar o comportamento da aplicação com base em informações internas e externas, identificar possíveis problemas e verificar se os mecanismos de autenticação funcionam corretamente.
 ---
