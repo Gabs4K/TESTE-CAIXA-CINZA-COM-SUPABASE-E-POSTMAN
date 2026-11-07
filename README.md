@@ -65,6 +65,32 @@ As evidências da configuração do Postman estão disponíveis na pasta 'prints
 
 ---
 #5. Configuração das Requisições
+
+**5.1 Endpoint utilizado:**
+/auth/v1/token?grant_type=password
+
+Esse endpoint pertence à API de autenticação do Supabase e é utilizado para realizar o login de usuários por meio de e-mail e senha.
+
+**5.2 Método HTTP utilizado:**
+Foi utilizado o método POST para enviar as credenciais do usuário (e-mail e senha) à API de autenticação do Supabase, permitindo a realização do login.
+
+**5.3 Headers utilizados:**
+Foram configurados três headers na requisição HTTP:
+
+-apikey: utiliza a variável {{api_key}}, que armazena a chave da API do projeto Supabase.
+-Authorization: utiliza o formato Bearer {{api_key}} para enviar a chave no cabeçalho de autorização.
+-Content-Type: utiliza o valor application/json, indicando que o corpo da requisição está no formato JSON.
+
+**5.4 Body JSON utilizado:**
+O corpo da requisição foi configurado no formato JSON, utilizando as variáveis {{email}} e {{password}}, que correspondem ao e-mail e à senha do usuário de teste armazenados no Environment do Postman.
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+**5.5 Finalidade da requisição:**
+A requisição tem como finalidade realizar a autenticação de um usuário na API do Supabase por meio do e-mail e da senha. A partir da resposta recebida, é possível verificar se as credenciais são válidas, analisar o código de status HTTP e observar os dados retornados pela API.
+
 ---
 #6. Execução dos Testes
 ---
