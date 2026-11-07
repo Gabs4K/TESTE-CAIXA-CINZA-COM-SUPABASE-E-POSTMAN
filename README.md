@@ -153,6 +153,8 @@ A documentação dos testes é importante para facilitar a compreensão dos cen�
 As únicas falhas identificadas foram as respostas de erro previstas nos cenários de teste, como senha incorreta, usuário inexistente, credenciais inválidas e campos vazios. A API apresentou o comportamento esperado em todas as situações, sem falhas inesperadas.
 
 **7.4 Evidências obrigatória:**
+As evidências do registro dos testes estão disponíveis na pasta prints/planilha deste repositório.
+
 ---
 # 8. Resultados Obtidos
 ---
