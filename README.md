@@ -22,7 +22,7 @@ O objetivo da configuração do Supabase foi preparar um ambiente de autenticaç
 **3.5 Evidências obrigatórias:**
 
 As evidências da configuração do Supabase estão disponíveis na pasta 'prints/' deste repositório. Elas incluem capturas de tela da criação do projeto, do painel da plataforma, da autenticação habilitada, do usuário de teste, das credenciais da API e da identificação do aluno no ambiente.
----
+
 #4. Configuração do Postman
 ---
 #5. Configuração das Requisições
